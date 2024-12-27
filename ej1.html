@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: white;
+        }
+        .caja{
+            width: 150px;
+            height: 150px;
+            margin: 50px;
+            margin-top: 550px;
+            cursor: pointer;
+        }
+        .caja_roja{
+            background-color: red;
+        }
+        .caja_azul{
+            background-color: blue;
+        }
+        .caja_verde{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja caja_roja" onclick="changeBackgroundColor('red')"></div>
+    <div class="caja caja_azul" onclick="changeBackgroundColor('blue')"></div>
+    <div class="caja caja_verde" onclick="changeBackgroundColor('green')"></div>
+
+    <script>
+        function changeBackgroundColor(color){
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

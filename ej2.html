@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px;
+            background-color: white;
+        }
+        textarea{
+            width: 600px;
+            height: 400px;
+            margin-bottom: 50px;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .contador{
+            font-size: 30px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+   <textarea id="TextArea" oninput="refreshCount()"></textarea>
+   <div class="contador">Caracteres: <span id="contCaracter">0</span></div> 
+
+   <script>
+        function refreshCount(){
+            const TextArea = document.getElementById('TextArea');
+            const contCaracter = document.getElementById('contCaracter');
+            contCaracter.textContent = TextArea.value.length;
+        }
+   </script>
+</body>
+</html>
